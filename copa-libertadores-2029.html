@@ -12,6 +12,16 @@
         body {
             font-family: "Titillium Web", sans-serif;
             background: #14191d;
+            animation: fadeIn 2s cubic-bezier(0.237, 0, 0, 0.966);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         .container {
@@ -29,8 +39,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 28px;
+            gap: 0px;
+            animation: expandGapHeader 1s cubic-bezier(0.237, 0, 0, 0.966) forwards;
             align-self: stretch;
+        }
+
+        @keyframes expandGapHeader {
+            from { gap: 0px; }
+            to { gap: 28px; }
         }
 
         .navegador {
@@ -155,8 +171,14 @@
             padding-bottom: 42px;
             flex-direction: column;
             align-items: flex-start;
-            gap: 32px;
+            gap: 0px;
+            animation: expandGapTable 1.1s cubic-bezier(0.237, 0, 0, 0.966) forwards;
             align-self: stretch;
+        }
+
+        @keyframes expandGapTable {
+            from { gap: 0px; }
+            to { gap: 32px; }
         }
 
         .fase {
@@ -321,18 +343,18 @@
             </div>
             <div class="competicao">
                 <div class="logo-competicao">
-                    <img src="G:\Meu Drive\master-liga-2\libertadores\copa-libertadores-logo-footylogos.png" alt="Logo">
+                    <img src=".\libertadores\copa-libertadores-logo-footylogos.png" alt="Logo">
                 </div>
                 <div class="nome-competicao">Copa Libertadores da America</div>
             </div>
-                 <div class="navegador">
-                <button class="botao" onclick="href='./brasileirao-serie-a.html'">
+                        <div class="navegador">
+                <button class="botao" onclick="window.location.href='./index.html'">
                     <span class="botao-texto">Brasileirão Série A</span>   
                 </button>
-                <button class="botao" onclick="window.location.href='./copa-libertadores-2029.html'">
+                <button class="botao pressed" onclick="window.location.href='./copa-libertadores-2029.html'">
                     <span class="botao-texto">Copa Libertadores da América</span>
                 </button>
-                 <button class="botao pressed" onclick="window.location.href='./copado-brasil.html'">
+                 <button class="botao" onclick="window.location.href='./copa-do-brasil.html'">
                     <span class="botao-texto">Copa do Brasil</span>
                 </button>
             </div>
@@ -354,7 +376,7 @@
                 <div class="row">
                     <div class="time-casa">
                         <div class="nome-do-time-casa">Corinthians</div>
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
                     </div>
 
                     <div class="placar">
@@ -364,7 +386,7 @@
                     </div>
 
                     <div class="time-visitante">
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\belgrano-logo-footylogos.png" alt="Belgrano"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\belgrano-logo-footylogos.png" alt="Belgrano"></div>
                         <div class="nome-do-time-fora">Belgrano</div>
                     </div>
                 </div>
@@ -376,7 +398,7 @@
                 <div class="row">
                     <div class="time-casa">
                         <div class="nome-do-time-casa">Cerro Porteno</div>
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\cerro-porteno-logo-footylogos-320.webp" alt="Cerro Porteno"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\cerro-porteno-logo-footylogos-320.webp" alt="Cerro Porteno"></div>
                     </div>
 
                     <div class="placar">
@@ -386,7 +408,7 @@
                     </div>
 
                     <div class="time-visitante">
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
                         <div class="nome-do-time-fora">Corinthians</div>
                     </div>
                 </div>
@@ -398,7 +420,7 @@
                 <div class="row">
                     <div class="time-casa">
                         <div class="nome-do-time-casa">Corinthians</div>
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
                     </div>
 
                     <div class="placar">
@@ -408,7 +430,7 @@
                     </div>
 
                     <div class="time-visitante">
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\penarol-logo-footylogos-320.webp" alt="Peñarol"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\penarol-logo-footylogos-320.webp" alt="Peñarol"></div>
                         <div class="nome-do-time-fora">Penarol</div>
                     </div>
                 </div>
@@ -420,7 +442,7 @@
                 <div class="row">
                     <div class="time-casa">
                         <div class="nome-do-time-casa">Peñarol</div>
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\penarol-logo-footylogos-320.webp" alt="Peñarol"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\penarol-logo-footylogos-320.webp" alt="Peñarol"></div>
                     </div>
 
                     <div class="placar">
@@ -430,7 +452,7 @@
                     </div>
 
                     <div class="time-visitante">
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
                         <div class="nome-do-time-fora">Corinthians</div>
                     </div>
                 </div>
@@ -442,7 +464,7 @@
                 <div class="row">
                     <div class="time-casa">
                         <div class="nome-do-time-casa">Corinthians</div>
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
                     </div>
 
                     <div class="placar">
@@ -452,7 +474,7 @@
                     </div>
 
                     <div class="time-visitante">
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\cerro-porteno-logo-footylogos-320.webp" alt="Cerro Porteno"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\cerro-porteno-logo-footylogos-320.webp" alt="Cerro Porteno"></div>
                         <div class="nome-do-time-fora">Cerro Porteno</div>
                     </div>
                 </div>
@@ -464,7 +486,7 @@
                 <div class="row">
                     <div class="time-casa">
                         <div class="nome-do-time-casa">Belgrano</div>
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\belgrano-logo-footylogos.png" alt="Belgrano"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\belgrano-logo-footylogos.png" alt="Belgrano"></div>
                     </div>
 
                     <div class="placar">
@@ -474,19 +496,23 @@
                     </div>
 
                     <div class="time-visitante">
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
                         <div class="nome-do-time-fora">Corinthians</div>
                     </div>
                 </div>
             </div>
-
+            <div class="fase">
+                <div class="line"></div>
+                <div class="texto-fase-de-grupos">Oitavas de final</div>
+                <div class="line"></div>
+            </div>
             <!-- Jogo 15: 🔴 Corinthians 1 x 3 Boca Juniors -->
             <div class="matches-row">
                 <div class="indicator indicator-defeat"></div>
                 <div class="row">
                     <div class="time-casa">
                         <div class="nome-do-time-casa">Corinthians</div>
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
                     </div>
 
                     <div class="placar">
@@ -496,12 +522,33 @@
                     </div>
 
                     <div class="time-visitante">
-                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\boca-juniors-logo-footylogos-320.webp" alt="Boca Juniors"></div>
+                        <div class="img-wrapper"><img src=".\libertadores\boca-juniors-logo-footylogos-320.webp" alt="Boca Juniors"></div>
                         <div class="nome-do-time-fora">Boca Juniors</div>
                     </div>
                 </div>
             </div>
 
+            <!-- Jogo 16: 🔴 Boca 4 x 0 Corinthians -->
+            <div class="matches-row">
+                <div class="indicator indicator-defeat"></div>
+                <div class="row">
+                    <div class="time-casa">
+                        <div class="nome-do-time-casa">Boca Juniors</div>
+                        <div class="img-wrapper"><img src=".\libertadores\boca-juniors-logo-footylogos-320.webp" alt="Boca Juniors"></div>
+                    </div>
+
+                    <div class="placar">
+                        <div class="ponto-casa">4</div>
+                        <div class="versus">X</div>
+                        <div class="ponto-visitante">0</div>
+                    </div>
+
+                    <div class="time-visitante">
+                        <div class="img-wrapper"><img src=".\brasileirao-serie-a\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="nome-do-time-fora">Corinthians</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
