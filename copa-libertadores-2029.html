@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa Libertadores da América</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Titillium Web", sans-serif;
+            background: #14191d;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            padding: 86px 0;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            align-self: stretch;
+            background: linear-gradient(180deg, #14191d 47.99%, #2D1F06 100%);
+        }
+
+        .header-competicao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            align-self: stretch;
+        }
+
+        .navegador {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .botao {
+            display: inline-flex;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            background: transparent;
+            transition: border 0.2s, background 0.2s;
+        }
+
+        .botao:hover {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .botao.pressed {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #FFF;
+        }
+
+        .botao-texto {
+            color: #FFF;
+            text-align: right;
+            font-family: "Titillium Web";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .botao.pressed .botao-texto {
+            color: #1E1E1E;
+            text-align: right;
+            font-family: "Titillium Web";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .temporada {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 28px;
+            width: 100%;
+            align-self: stretch;
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .texto-temporada {
+            color: rgba(255, 255, 255, 0.35);
+            font-family: "Titillium Web";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            white-space: nowrap;
+        }
+
+        .competicao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            align-self: stretch;
+        }
+
+        .logo-competicao {
+            display: flex;
+            padding: 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100px;
+            height: 100px;
+            aspect-ratio: 1/1;
+            border-radius: 1000px;
+            border: 4px solid #A46B00;
+            background: #FFF;
+        }
+
+        .logo-competicao img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nome-competicao {
+            display: flex;
+            height: 64px;
+            flex-direction: column;
+            justify-content: center;
+            align-self: stretch;
+            color: #FFF;
+            text-align: center;
+            font-family: "Titillium Web";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            white-space: nowrap;
+        }
+
+        .tabela {
+            display: flex;
+            padding-bottom: 42px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            align-self: stretch;
+        }
+
+        .fase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+        }
+
+        .texto-fase-de-grupos {
+            color: #FFF;
+            text-align: center;
+            font-family: "Titillium Web";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            white-space: nowrap; 
+        }
+
+        .matches-row {
+            display: flex;
+            width: 100%; 
+            height: 65px;
+            align-items: center;
+            align-self: stretch;
+        }
+
+        .indicator-victory {
+            width: 2px;
+            height: 64px;
+            background: #0CBD0C;
+        }
+          .indicator-draw {
+            width: 2px;
+            height: 64px;
+            background: #C7C7C7;
+        }
+        .indicator-defeat {
+            width: 2px;
+            height: 64px;
+            background: #FF0004;
+        }
+              
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex: 1 0 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .time-casa {
+            display: flex;
+            padding-right: 16px;
+            align-items: center;
+            gap: 14px;
+            flex: 1 0 0;
+        }
+
+        .placar {
+            display: flex;
+            width: 114px;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .time-visitante {
+            display: flex;
+            padding-left: 16px;
+            align-items: center;
+            gap: 14px;
+            flex: 1 0 0;
+        }
+
+        .nome-do-time-casa {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1 0 0;
+            align-self: stretch;
+            color: #FFF;
+            text-align: right;
+            font-family: "Titillium Web";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .nome-do-time-fora {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1 0 0;
+            align-self: stretch;
+            color: #FFF;
+            text-align: left;
+            font-family: "Titillium Web";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .img-wrapper {
+            display: flex;
+            width: 64px;
+            height: 64px;
+            padding: 10px;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .img-wrapper img {
+            width: 64px !important;
+            height: 64px !important;
+        }
+
+        .ponto-casa {
+            flex: 1 0 0;
+            color: #FFF;
+            text-align: center;
+            font-family: "Titillium Web";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .versus {
+            flex: 1 0 0;
+            color: #FFF;
+            text-align: center;
+            font-family: "Titillium Web";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .ponto-visitante {
+            flex: 1 0 0;
+            color: #FFF;
+            text-align: center;
+            font-family: "Titillium Web";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-competicao">
+            <div class="temporada">
+                <div class="line"></div>
+                <div class="texto-temporada">Temporada 2029</div>
+            </div>
+            <div class="competicao">
+                <div class="logo-competicao">
+                    <img src="G:\Meu Drive\master-liga-2\libertadores\copa-libertadores-logo-footylogos.png" alt="Logo">
+                </div>
+                <div class="nome-competicao">Copa Libertadores da America</div>
+            </div>
+                        <div class="navegador">
+                <button class="botao" onclick="window.location.href='G:/Meu Drive/master-liga-2/index.html'">
+                    <span class="botao-texto">Brasileirão Série A</span>   
+                </button>
+                <button class="botao pressed" onclick="window.location.href='G:/Meu Drive/master-liga-2/copa-libertadores-2029.html'">
+                    <span class="botao-texto">Copa Libertadores da América</span>
+                </button>
+                 <button class="botao" onclick="window.location.href='G:/Meu Drive/master-liga-2/copa-do-brasil.html'">
+                    <span class="botao-texto">Copa do Brasil</span>
+                </button>
+            </div>
+            <div class="temporada">
+                <div class="texto-temporada">Corinthians Paulista</div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="tabela">
+            <div class="fase">
+                <div class="line"></div>
+                <div class="texto-fase-de-grupos">Fase de grupos</div>
+                <div class="line"></div>
+            </div>
+
+            <!-- Jogo 1: 🟢 Corinthians 2 x 1 Belgrano -->
+            <div class="matches-row">
+                <div class="indicator indicator-victory"></div>
+                <div class="row">
+                    <div class="time-casa">
+                        <div class="nome-do-time-casa">Corinthians</div>
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                    </div>
+
+                    <div class="placar">
+                        <div class="ponto-casa">2</div>
+                        <div class="versus">X</div>
+                        <div class="ponto-visitante">1</div>
+                    </div>
+
+                    <div class="time-visitante">
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\belgrano-logo-footylogos.png" alt="Belgrano"></div>
+                        <div class="nome-do-time-fora">Belgrano</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jogo 3: 🟢 Cerro Porteno 1 x 3 Corinthians -->
+            <div class="matches-row">
+                <div class="indicator indicator-victory"></div>
+                <div class="row">
+                    <div class="time-casa">
+                        <div class="nome-do-time-casa">Cerro Porteno</div>
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\cerro-porteno-logo-footylogos-320.webp" alt="Cerro Porteno"></div>
+                    </div>
+
+                    <div class="placar">
+                        <div class="ponto-casa">1</div>
+                        <div class="versus">X</div>
+                        <div class="ponto-visitante">3</div>
+                    </div>
+
+                    <div class="time-visitante">
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="nome-do-time-fora">Corinthians</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jogo 4: 🟢 Corinthians 4 x 1 Penarol -->
+            <div class="matches-row">
+                <div class="indicator indicator-victory"></div>
+                <div class="row">
+                    <div class="time-casa">
+                        <div class="nome-do-time-casa">Corinthians</div>
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                    </div>
+
+                    <div class="placar">
+                        <div class="ponto-casa">4</div>
+                        <div class="versus">X</div>
+                        <div class="ponto-visitante">1</div>
+                    </div>
+
+                    <div class="time-visitante">
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\penarol-logo-footylogos-320.webp" alt="Peñarol"></div>
+                        <div class="nome-do-time-fora">Penarol</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jogo 7: 🟢 Peñarol 1 x 4 Corinthians -->
+            <div class="matches-row">
+                <div class="indicator indicator-victory"></div>
+                <div class="row">
+                    <div class="time-casa">
+                        <div class="nome-do-time-casa">Peñarol</div>
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\penarol-logo-footylogos-320.webp" alt="Peñarol"></div>
+                    </div>
+
+                    <div class="placar">
+                        <div class="ponto-casa">1</div>
+                        <div class="versus">X</div>
+                        <div class="ponto-visitante">4</div>
+                    </div>
+
+                    <div class="time-visitante">
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="nome-do-time-fora">Corinthians</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jogo 9: 🟢 Corinthians 1 x 0 Cerro Porteno -->
+            <div class="matches-row">
+                <div class="indicator indicator-victory"></div>
+                <div class="row">
+                    <div class="time-casa">
+                        <div class="nome-do-time-casa">Corinthians</div>
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                    </div>
+
+                    <div class="placar">
+                        <div class="ponto-casa">1</div>
+                        <div class="versus">X</div>
+                        <div class="ponto-visitante">0</div>
+                    </div>
+
+                    <div class="time-visitante">
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\cerro-porteno-logo-footylogos-320.webp" alt="Cerro Porteno"></div>
+                        <div class="nome-do-time-fora">Cerro Porteno</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jogo 12: 🔴 Belgrano 4 x 3 Corinthians -->
+            <div class="matches-row">
+                <div class="indicator indicator-defeat"></div>
+                <div class="row">
+                    <div class="time-casa">
+                        <div class="nome-do-time-casa">Belgrano</div>
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\belgrano-logo-footylogos.png" alt="Belgrano"></div>
+                    </div>
+
+                    <div class="placar">
+                        <div class="ponto-casa">4</div>
+                        <div class="versus">X</div>
+                        <div class="ponto-visitante">3</div>
+                    </div>
+
+                    <div class="time-visitante">
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                        <div class="nome-do-time-fora">Corinthians</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jogo 15: 🔴 Corinthians 1 x 3 Boca Juniors -->
+            <div class="matches-row">
+                <div class="indicator indicator-defeat"></div>
+                <div class="row">
+                    <div class="time-casa">
+                        <div class="nome-do-time-casa">Corinthians</div>
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+                    </div>
+
+                    <div class="placar">
+                        <div class="ponto-casa">1</div>
+                        <div class="versus">X</div>
+                        <div class="ponto-visitante">3</div>
+                    </div>
+
+                    <div class="time-visitante">
+                        <div class="img-wrapper"><img src="G:\Meu Drive\master-liga-2\libertadores\boca-juniors-logo-footylogos-320.webp" alt="Boca Juniors"></div>
+                        <div class="nome-do-time-fora">Boca Juniors</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
