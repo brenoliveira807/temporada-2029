@@ -99,7 +99,7 @@ body {
 
         .botao.pressed .botao-texto {
             color: #1E1E1E;
-            text-align: right;
+            text-align: center;
             font-family: "Titillium Web";
             font-size: 14px;
             font-style: normal;
@@ -392,3 +392,291 @@ body {
             font-weight: 700;
             line-height: normal;
         }
+        
+/* =========================== */
+/*   CLASSES MOBILE MATCHES-ROW  */
+/* =========================== */
+
+.matches-row.mobile {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 54px;
+    align-items: stretch;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 0;
+}
+
+.matches-row.mobile .row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    flex: 1 0 0;
+    border-bottom: none;
+    padding-bottom: 2px;
+    padding-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.matches-row.mobile .indicator-victory {
+    width: 4px;
+    align-self: flex-start;
+    height: auto;
+    min-height: 48px;
+    background: #0CBD0C;
+}
+
+.matches-row.mobile .indicator-draw {
+    width: 4px;
+    align-self: flex-start;
+    height: auto;
+    min-height: 48px;
+    background: #C7C7C7;
+}
+
+.matches-row.mobile .indicator-defeat {
+    width: 4px;
+    align-self: flex-start;
+    height: auto;
+    min-height: 48px;
+    background: #FF0004;
+}
+
+.matches-row.mobile .time-casa {
+    display: flex;
+    padding-right: 0;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex: 1 0 0;
+}
+
+.matches-row.mobile .time-visitante {
+    display: flex;
+    padding-left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    flex: 1 0 0;
+}
+
+.matches-row.mobile .nome-do-time-casa {
+    width: auto;
+    color: #FFF;
+    text-align: right;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: normal;
+}
+
+.matches-row.mobile .nome-do-time-fora {
+    width: auto;
+    color: #FFF;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: normal;
+}
+
+.matches-row.mobile .img-wrapper {
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.matches-row.mobile .placar {
+    display: flex;
+    width: 114px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.matches-row.mobile .ponto-casa {
+    flex: 1 0 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Titillium Web";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.matches-row.mobile .versus {
+    flex: 1 0 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.matches-row.mobile .ponto-visitante {
+    flex: 1 0 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Titillium Web";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* =========================== */
+/*   MEDIA QUERY AUTOMÁTICA    */
+/* =========================== */
+
+@media screen and (max-width: 540px) {
+    .matches-row,
+    .matches-row.mobile {
+        display: flex;
+        width: 100%;
+        height: auto;
+        min-height: 54px;
+        align-items: stretch;
+        justify-content: center;
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    .matches-row .row,
+    .matches-row.mobile .row {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: row;
+        flex: 1 0 0;
+        border-bottom: none;
+        padding-bottom: 2px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .matches-row .indicator-victory {
+        width: 4px;
+        align-self: center;
+        height: 86px;
+        min-height: 48px;
+        background: #0CBD0C;
+    }
+
+    .matches-row .indicator-draw {
+       width: 4px;
+        align-self: center;
+        height: 86px;
+        min-height: 48px;
+        background: #C7C7C7;
+    }
+
+    .matches-row .indicator-defeat {
+       width: 4px;
+        align-self: center;
+        height: 86px;
+        min-height: 48px;
+        background: #FF0004;
+    }
+
+    .matches-row .time-casa {
+        display: flex;
+        padding-right: 18px;
+        align-items: end;
+        justify-content: flex-end;
+        gap: 14px;
+        flex: 1 0 0;
+        flex-direction: column-reverse
+    }
+
+    .matches-row .time-visitante {
+        display: flex;
+        padding-left: 18px;
+        align-items: initial;
+        justify-content: flex-start;
+        gap: 14px;
+        flex: 1 0 0;
+        flex-direction: column
+        
+    }
+
+    .matches-row .nome-do-time-casa {
+        color: #FFF;
+        text-align: right;
+        font-family: "Titillium Web";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        white-space: normal;
+    }
+
+    .matches-row .nome-do-time-fora {
+        width: auto;
+        color: #FFF;
+        font-family: "Titillium Web";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        white-space: normal;
+    }
+
+    .matches-row .img-wrapper {
+        width: 64px;
+        height: 64px;
+        padding: 0px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .matches-row .placar {
+        display: flex;
+        width: 114px;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .matches-row .ponto-casa {
+        flex: 1 0 0;
+        color: #FFF;
+        text-align: center;
+        font-family: "Titillium Web";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .matches-row .versus {
+        flex: 1 0 0;
+        color: #FFF;
+        text-align: center;
+        font-family: "Titillium Web";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .matches-row .ponto-visitante {
+        flex: 1 0 0;
+        color: #FFF;
+        text-align: center;
+        font-family: "Titillium Web";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
