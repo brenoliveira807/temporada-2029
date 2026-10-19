@@ -18,54 +18,42 @@
     <div class="container">
         <div class="header-competicao">
             <div class="temporada">
+                <button class="botao" onclick="window.location.href='./home.html'">
+                    <span class="botao-texto">Back</span>
+                </button>
                 <div class="line"></div>
                 <div class="texto-temporada">Temporada 2029</div>
             </div>
             <div class="competicao">
                 <div class="logo-competicao-brasileirao">
-                    <img src=".\\brasileirao-serie-a\brasileirao-serie-a-logo-footylogos.svg" alt="Logo">
+                    <img src=".\\brasileirao-serie-a\brasileirao-serie-a-logo-footylogos.svg"  alt="Logo">
                 </div>
                 <div class="nome-competicao">Brasileirão Série A</div>
             </div>
-                        <div class="navegador">
-                <button class="botao pressed" onclick="window.location.href='./brasileirao-serie-a.html'">
-                    <span class="botao-texto">Brasileirão Série A</span>   
-                </button>
-                <button class="botao" onclick="window.location.href='./copa-libertadores-2029.html'">
-                    <span class="botao-texto">Copa Libertadores da América</span>
-                </button>
-                 <button class="botao" onclick="window.location.href='./copa-do-brasil.html'">
-                    <span class="botao-texto">Copa do Brasil</span>
-                </button>
-            </div>
-            <div class="temporada">
-                <div class="texto-temporada">Corinthians Paulista</div>
-                <div class="line"></div>
-            </div>
+                       
+            <!-- Jogo 1 -->
+<div class="matches-row" onclick="toggleAccordion(this)">
+    <div class="indicator indicator-victory"></div>
+    <div class="row">
+        <div class="time-casa">
+            <div class="nome-do-time-casa">Grêmio Novo Horizontino</div>
+            <div class="img-wrapper"><img src=".\\brasileirao-serie-b\gremio-novorizontino-logo-footylogos-320.webp" alt="Grêmio"></div>
         </div>
 
+        <div class="placar">
+            <div class="ponto-casa">1</div>
+            <div class="versus">X</div>
+            <div class="ponto-visitante">3</div>
+        </div>
 
-            <!-- Jogo 1 -->
-            <div class="matches-row">
-                <div class="indicator indicator-victory"></div>
-                <div class="row">
-                    <div class="time-casa">
-                        <div class="nome-do-time-casa">Grêmio Novo Horizontino</div>
-                        <div class="img-wrapper"><img src=".\\brasileirao-serie-b\gremio-novorizontino-logo-footylogos-320.webp" alt="Grêmio"></div>
-                    </div>
+        <div class="time-visitante">
+            <div class="img-wrapper"><img src=".\\brasileirao-serie-a\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+            <div class="nome-do-time-fora">Corinthians</div>
+        </div>
+    </div>
 
-                    <div class="placar">
-                        <div class="ponto-casa">1</div>
-                        <div class="versus">X</div>
-                        <div class="ponto-visitante">3</div>
-                    </div>
 
-                    <div class="time-visitante">
-                        <div class="img-wrapper"><img src=".\\brasileirao-serie-a\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
-                        <div class="nome-do-time-fora">Corinthians</div>
-                    </div>
-                </div>
-            </div>
+</div>
 
             <!-- Jogo 2 -->
             <div class="matches-row">
@@ -842,7 +830,17 @@
                 </div>
             </div>
         </div>
-
+<!-- Div finalista time campeão -->
+<div class="finalist">
+  <div class="time-campeao">
+    <div class="img-wrapper"><img src=".\\brasileirao-serie-a\corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+    <div class="trofeu">🏆🏆🏆🏆</div>
+    <div class="time-campeao-text">Corinthians</div>
+    <div class="titulo">Tetra Campeão do Brasileirão Série A</div>
+  </div>
 </div>
+</div>
+
+
 </body>
 </html>
