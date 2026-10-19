@@ -1,0 +1,15 @@
+source:
+  - ./home.html
+  - ./index_2030.html
+  - ./copado-brasil_2030.html
+  - ./copa-libertadores_2030.html
+  - ./brasileirao-serie-a.html
+  - ./brasileirao-serie-b.html
+  - ./copa-do-brasil.html
+  - ./copa-libertadores-2029.html
+  - ./mundial-de-clubes.html
+
+dest:
+  root: /
+
+include: []
