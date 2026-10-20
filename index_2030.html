@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
 </head>
-<body>
-
-
+<body style="background: linear-gradient(180deg, #0b1938 47.99%, #14191d 100%);"> 
 
     <div class="container">
         <div class="header-competicao">
             <div class="temporada">
+                <button class="botao" onclick="window.location.href='./home.html'">
+                    <span class="botao-texto">Back</span>
+                </button>
                 <div class="line"></div>
                 <div class="texto-temporada">Temporada 2030</div>
             </div>
@@ -27,19 +28,54 @@
                 </div>
                 <div class="nome-competicao">Brasileirão Série A</div>
             </div>
-                        <div class="navegador">
-                <button class="botao pressed" onclick="window.location.href='./brasileirao-serie-a_2030.html'">
-                    <span class="botao-texto">Brasileirão Série A</span>   
-                </button>
-                <button class="botao" onclick="window.location.href='./copa-libertadores_2030.html'">
-                    <span class="botao-texto">Copa Libertadores da América</span>
-                </button>
-                 <button class="botao" onclick="window.location.href='./copa-do-brasil_2030.html'">
-                    <span class="botao-texto">Copa do Brasil</span>
-                </button>
-            </div>
+
             <div class="temporada">
                 <div class="texto-temporada">Corinthians Paulista</div>
                 <div class="line"></div>
             </div>
         </div>
+        
+        <!-- DRAW - Corinthians 2x2 Grêmio -->
+<div class="matches-row">
+    <div class="indicator indicator-draw"></div>
+    <div class="row">
+        <div class="time-casa">
+            <div class="nome-do-time-casa">Corinthians</div>
+            <div class="img-wrapper"><img src="./brasileirao-serie-a/corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+        </div>
+
+        <div class="placar">
+            <div class="ponto-casa">2</div>
+            <div class="versus">X</div>
+            <div class="ponto-visitante">2</div>
+        </div>
+
+        <div class="time-visitante">
+            <div class="img-wrapper"><img src="./brasileirao-serie-a/gremio-logo-footylogos-320.webp" alt="Grêmio"></div>
+            <div class="nome-do-time-fora">Grêmio</div>
+        </div>
+    </div>
+</div>
+<!-- VICTORY - Bragantino 1x3 Corinthians -->
+<div class="matches-row">
+    <div class="indicator indicator-victory"></div>
+    <div class="row">
+        <div class="time-casa">
+            <div class="nome-do-time-casa">Bragantino</div>
+            <div class="img-wrapper"><img src="./brasileirao-serie-a/rb-bragantino-logo-footylogos-320.webp" alt="Bragantino"></div>
+        </div>
+
+        <div class="placar">
+            <div class="ponto-casa">1</div>
+            <div class="versus">X</div>
+            <div class="ponto-visitante">3</div>
+        </div>
+
+        <div class="time-visitante">
+            <div class="img-wrapper"><img src="./brasileirao-serie-a/corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+            <div class="nome-do-time-fora">Corinthians</div>
+        </div>
+    </div>
+</div>
+
+</body>
