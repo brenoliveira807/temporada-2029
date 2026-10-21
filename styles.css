@@ -53,7 +53,7 @@ body {
             align-items: center;
             gap: 32px;
             align-self: stretch;
-            background: linear-gradient(180deg, #14191d 47.99%, #2d0517 100%);
+            background: linear-gradient(180deg, #2d0517 47.99%, #14191d 100%);
         }
 
         .header-competicao {
@@ -590,7 +590,7 @@ align-self: stretch;
         gap: 6px;
         padding: 8px 0;
     }
-
+    
     .matches-row .row,
     .matches-row.mobile .row {
         display: flex;
@@ -603,7 +603,17 @@ align-self: stretch;
         padding-top: 18px;
         border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
+    .container
+    .container.mobile {
+            display: flex;
+            height: 100%;
+            padding: 16px 0;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            align-self: stretch;
 
+        } 
     .matches-row .indicator-victory {
         width: 4px;
         align-self: center;
