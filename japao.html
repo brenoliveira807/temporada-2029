@@ -13,6 +13,38 @@
 </head>
 <body style="background: linear-gradient(180deg, #0b1938 47.99%, #14191d 100%);">
 
+<!-- Objeto animado no background (fixo na rolagem) -->
+<div style="
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 870px;
+    height: 870px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 870px;
+    background: rgba(0, 111, 255, 0.22);
+    filter: blur(250px);
+    animation: kf_120_594_scale_0 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
+"></div>
+
+<style>
+@keyframes kf_120_594_scale_0 {
+    0% { 
+        width: 870px;
+        height: 870px;
+    }  
+    100% { 
+        width: 1200px;
+        height: 1200px;
+    } 
+}
+</style>
+
 
 
     <div class="container">
@@ -43,8 +75,8 @@
                 <div class="line"></div>
             </div>
 
-     <div class="campeonato" onclick="window.location.href='\index.html'" onmouseenter="this.style.cursor = 'pointer'">
-    <div class="img-wrapper"><img src=".\\escudos\\fifa-logo-footylogos.png" alt="Brasileirão"></div>
+     <div class="campeonato" onclick="window.location.href='\amistosos-japao.html'" onmouseenter="this.style.cursor = 'pointer'">
+    <div class="img-wrapper"><img src=".\\escudos\\fifa-logo-footylogos-white.png" alt="Brasileirão"></div>
     <div class="textos">
         <div class="titulo">Amistosos Internacionais</div>
         <div class="titulo-campeonato">Sem-título</div>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Brasileirão Série A</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body style="background: linear-gradient(180deg, #0444506 47.99%, #14191d 100%);">
+
+<!-- Objeto animado no background (fixo na rolagem) -->
+<div style="
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 870px;
+    height: 870px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 870px;
+    background: #887B01;
+    filter: blur(250px);
+    animation: kf_120_594_scale_0 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
+"></div>
+
+<style>
+@keyframes kf_120_594_scale_0 {
+    0% { 
+        width: 870px;
+        height: 870px;
+    }  
+    100% { 
+        width: 1200px;
+        height: 1200px;
+    } 
+}
+</style>
+
+
+    <div class="container">
+        <div class="header-competicao">
+            </div>
+            <div class="competicao">
+                <div class="logo-clube-home">
+                    <img src=".\\escudos\brazil-national-team-logo-footylogos-320.webp" width="200px" alt="Logo">
+                </div>
+                <div class="nome-competicao">Seleção Brasileira</div>
+            </div>
+                                                            <div class="navegador">
+                <button class="botao" onclick="window.location.href='./home.html'">
+                    <span class="botao-texto">Corinthians Paulista</span>   
+                </button>
+                <button class="botao" onclick="window.location.href='./japao.html'">
+                    <span class="botao-texto">Seleção Japonesa</span>
+                </button>
+                 <button class="botao pressed" onclick="window.location.href='./brasil.html'">
+                    <span class="botao-texto">Seleção Brasileira</span>
+                </button>
+            </div>
+   
+<div class="tabela">
+<div class="fase">
+                <div class="line"></div>
+                <div class="texto-fase-de-grupos">2029</div>
+                <div class="line"></div>
+            </div>
+
+     <div class="campeonato" onclick="window.location.href='\amistosos-japao.html'" onmouseenter="this.style.cursor = 'pointer'">
+    <div class="img-wrapper"><img src=".\\escudos\\fifa-logo-footylogos-white.png" alt="Brasileirão"></div>
+    <div class="textos">
+        <div class="titulo">Amistosos Internacionais</div>
+        <div class="titulo-campeonato">Sem-título</div>
+    </div>
+</div>
+
+
+</div> 
+       
+       
+       
+</div>
+    
+
+<script src="script.js"></script>
+
+</body>
+</html>
