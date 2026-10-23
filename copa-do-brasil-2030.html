@@ -12,6 +12,42 @@
 
 </head>
 <body style="background: linear-gradient(180deg, #0a1f0e  47.99%, #14191d 100%);">
+    
+
+<!-- Objeto animado no background (fixo na rolagem) -->
+<div style="
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 870px;
+    height: 870px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 870px;
+    background: #00400C;
+    filter: blur(250px);
+    animation: kf_120_594_scale_0 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
+
+
+"></div>
+
+<style>
+@keyframes kf_120_594_scale_0 {
+    0% { 
+        width: 870px;
+        height: 870px;
+    }  
+    100% { 
+        width: 1200px;
+        height: 1200px;
+    } 
+}
+</style>    
+      
     <div class="container">
         <div class="header-competicao">
             <div class="temporada">
@@ -32,6 +68,7 @@
                 <div class="line"></div>
             </div>
         </div>
+<div class="tabela">
  <!-- VITORIA - Corinthians 3x0 Ceará -->
 <div class="matches-row">
     <div class="indicator indicator-victory"></div>
@@ -74,7 +111,7 @@
         </div>
     </div>
 </div>
-            
+</div>           
 </div>
 
 

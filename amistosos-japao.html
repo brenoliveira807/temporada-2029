@@ -12,7 +12,39 @@
 
 </head>
 <body style="background: linear-gradient(180deg, #231835 47.99%, #14191d 100%);"> 
+<!-- Objeto animado no background (fixo na rolagem) -->
+<div style="
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 870px;
+    height: 870px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 870px;
+    background: #006839;
+    filter: blur(250px);
+    animation: kf_120_594_scale_0 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
 
+
+"></div>
+
+<style>
+@keyframes kf_120_594_scale_0 {
+    0% { 
+        width: 870px;
+        height: 870px;
+    }  
+    100% { 
+        width: 1200px;
+        height: 1200px;
+    } 
+}
+</style>
     <div class="container">
         <div class="header-competicao">
             <div class="temporada">
@@ -24,7 +56,7 @@
             </div>
             <div class="competicao">
                 <div class="logo-competicao-amistoso">
-                    <img src=".\\escudos\\fifa-logo-footylogos.png" " alt="Logo">
+                    <img src=".\\escudos\fifa-full-logo.png" " alt="Logo">
                 </div>
                 <div class="nome-competicao">Amistosos da FIFA</div>
             </div>

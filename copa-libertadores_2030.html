@@ -11,7 +11,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
 </head>
-<body style="background: linear-gradient(180deg, #261b0c 47.99%, #14191d 100%);">
+<body style="background: linear-gradient(180deg, #201806 47.99%, #14191d 100%);">
+    
+<!-- Objeto animado no background (fixo na rolagem) -->
+<div style="
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 870px;
+    height: 870px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 870px;
+    background: #624400;
+    filter: blur(250px);
+    animation: kf_120_594_scale_0 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
+"></div>
+
+<style>
+@keyframes kf_120_594_scale_0 {
+    0% { 
+        width: 870px;
+        height: 870px;
+    }  
+    100% { 
+        width: 1200px;
+        height: 1200px;
+    } 
+}
+</style>
+
     
     <div class="container">
         <div class="header-competicao">
