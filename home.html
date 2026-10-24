@@ -58,6 +58,9 @@
                 <div class="nome-competicao">Corinthians Paulista</div>
             </div>
                                     <div class="navegador">
+                                        <button class="botao" onclick="window.location.href='./roma.html'">
+                    <span class="botao-texto">Associazione Sportiva Roma</span>   
+                </button>
                 <button class="botao pressed">
                     <span class="botao-texto">Corinthians Paulista</span>   
                 </button>
@@ -130,7 +133,27 @@
 </div>
     
 
-<script src="script.js"></script>
+    
+<!-- NO INÍCIO DO SCRIPT, AGORA EM CADA PÁGINA -->
+<script>
+    // Define qual botão está pressionado baseado na URL atual
+    document.addEventListener('DOMContentLoaded', function() {
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+        
+        // Mapeamento de caminhos para botões específicos
+        const activeButtons = {
+            'home.html': '.navegador-home button:first-child',
+            'roma.html': '.navegador-roma button:first-child',
+            'japao.html': '.navegador-japao button:first-child',
+            'brasil.html': '.navegador-brasil button:first-child'
+        };
+        
+        if (activeButtons[pathSegments[0]]) {
+            const buttons = document.querySelectorAll(activeButtons[pathSegments[0]]);
+            buttons.forEach(btn => btn.classList.add('pressed'));
+        }
+    });
+</script>
 
 </body>
 </html>

@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Brasileirão Série A</title>
+    <title>Copa do Mundo FIFA</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-
 </head>
 <body style="background: linear-gradient(180deg, #0b1938 47.99%, #14191d 100%);">
 
@@ -56,7 +55,12 @@
                 </div>
                 <div class="nome-competicao">Seleção Japonesa</div>
             </div>
-                                                            <div class="navegador">
+<div class="navegador">
+                <div class="navegador">
+                                        <button class="botao" onclick="window.location.href='./roma.html'">
+                    <span class="botao-texto">Associazione Sportiva Roma</span>   
+                </button>
+                </div>
                 <button class="botao" onclick="window.location.href='./home.html'">
                     <span class="botao-texto">Corinthians Paulista</span>   
                 </button>
@@ -67,8 +71,22 @@
                     <span class="botao-texto">Seleção Brasileira</span>
                 </button>
             </div>
+
    
 <div class="tabela">
+<div class="fase">
+                <div class="line"></div>
+                <div class="texto-fase-de-grupos">2030</div>
+                <div class="line"></div>
+            </div>
+
+     <div class="campeonato" onclick="window.location.href='\copa-do-mundo-fifa.html'" onmouseenter="this.style.cursor = 'pointer'">
+    <div class="img-wrapper"><img src=".\\escudos\\logo-fifa-world-cup-white.png" alt="Brasileirão"></div>
+    <div class="textos">
+        <div class="titulo">Copa do Mundo FIFA</div>
+        <div class="titulo-disputa">Em disputa</div>
+    </div>
+</div>
 <div class="fase">
                 <div class="line"></div>
                 <div class="texto-fase-de-grupos">2029</div>
@@ -83,15 +101,32 @@
     </div>
 </div>
 
-
 </div> 
        
        
        
 </div>
     
-
-<script src="script.js"></script>
+<!-- NO INÍCIO DO SCRIPT, AGORA EM CADA PÁGINA -->
+<script>
+    // Define qual botão está pressionado baseado na URL atual
+    document.addEventListener('DOMContentLoaded', function() {
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+        
+        // Mapeamento de caminhos para botões específicos
+        const activeButtons = {
+            'home.html': '.navegador-home button:first-child',
+            'roma.html': '.navegador-roma button:first-child',
+            'japao.html': '.navegador-japao button:first-child',
+            'brasil.html': '.navegador-brasil button:first-child'
+        };
+        
+        if (activeButtons[pathSegments[0]]) {
+            const buttons = document.querySelectorAll(activeButtons[pathSegments[0]]);
+            buttons.forEach(btn => btn.classList.add('pressed'));
+        }
+    });
+</script>
 
 </body>
 </html>

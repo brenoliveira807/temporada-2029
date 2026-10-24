@@ -11,7 +11,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
 </head>
-<body style="background: linear-gradient(180deg, #2d0517 47.99%, #14191d 100%);">
+<body>
+
+<!-- Objeto animado no background (fixo na rolagem) -->
+<div style="
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 870px;
+    height: 870px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 870px;
+     background: linear-gradient(45deg, 
+   rgba(0, 62, 169, 1),     
+   rgba(155, 36, 143, 1),   
+   rgba(255, 204, 0, 1)    
+  );
+    filter: blur(250px);
+    animation: kf_120_594_scale_0 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
+
+
+"></div>
+
+<style>
+@keyframes kf_120_594_scale_0 {
+    0% { 
+        width: 870px;
+        height: 870px;
+    }  
+    100% { 
+        width: 1200px;
+        height: 1200px;
+    } 
+}
+</style>
     <div class="container-mundial">
         <div class="header-competicao">
             <div class="temporada">
@@ -26,11 +64,11 @@
                    <video src="./escudos/fifa-world-cup.mp4" autoplay loop muted>
         </video>
                 </div>
-                <div class="nome-competicao">Mundial de Clubes da FIFA 2030</div>
+                <div class="nome-competicao">Copa do Mundo FIFA 2030</div>
             </div>
           
             <div class="temporada">
-                <div class="texto-temporada">Corinthians Paulista</div>
+                <div class="texto-temporada">Seleção Japonesa</div>
                 <div class="line"></div>
             </div>
         </div>
@@ -40,108 +78,28 @@
                 <div class="texto-fase-de-grupos">Fase de Grupos</div>
                 <div class="line"></div>
             </div>
-
-<!-- VITORIA - Corinthians 4x1 Arsenal -->
+<!-- VITÓRIA - Japão 3x2 Estados Unidos -->
 <div class="matches-row">
     <div class="indicator indicator-victory"></div>
     <div class="row">
         <div class="time-casa">
-            <div class="nome-do-time-casa">Corinthians</div>
-            <div class="img-wrapper"><img src="./escudos/corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
+            <div class="nome-do-time-casa">Japão</div>
+            <div class="img-wrapper"><img src="./escudos/japan-national-team-logo-footylogos-320.webp" alt="Japão"></div>
         </div>
 
         <div class="placar">
-            <div class="ponto-casa">4</div>
+            <div class="ponto-casa">3</div>
             <div class="versus">X</div>
-            <div class="ponto-visitante">1</div>
+            <div class="ponto-visitante">2</div>
         </div>
 
         <div class="time-visitante">
-            <div class="img-wrapper"><img src="./escudos/arsenal-logo-footylogos-320.webp" alt="Arsenal"></div>
-            <div class="nome-do-time-fora">Arsenal</div>
-        </div>
-    </div>
-</div>
-<!-- DERROTA - Cruzeiro 2x1 Corinthians -->
-<div class="matches-row">
-    <div class="indicator indicator-defeat"></div>
-    <div class="row">
-        <div class="time-casa">
-            <div class="nome-do-time-casa">Cruzeiro</div>
-            <div class="img-wrapper"><img src="./escudos/cruzeiro-logo-footylogos-320.webp" alt="Cruzeiro"></div>
-        </div>
-
-        <div class="placar">
-            <div class="ponto-casa">2</div>
-            <div class="versus">X</div>
-            <div class="ponto-visitante">1</div>
-        </div>
-
-        <div class="time-visitante">
-            <div class="img-wrapper"><img src="./escudos/corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
-            <div class="nome-do-time-fora">Corinthians</div>
-        </div>
-    </div>
-</div>
-<!-- EMPATE - Al-Hilal 0x0 Corinthians -->
-<div class="matches-row">
-    <div class="indicator indicator-draw"></div>
-    <div class="row">
-        <div class="time-casa">
-            <div class="nome-do-time-casa">Al-Hilal</div>
-            <div class="img-wrapper"><img src="./escudos/al-hilal-logo-footylogos-320.webp" alt="Al-Hilal"></div>
-        </div>
-
-        <div class="placar">
-            <div class="ponto-casa">0</div>
-            <div class="versus">X</div>
-            <div class="ponto-visitante">0</div>
-        </div>
-
-        <div class="time-visitante">
-            <div class="img-wrapper"><img src="./escudos/corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
-            <div class="nome-do-time-fora">Corinthians</div>
-        </div>
-    </div>
-</div>
-  <div class="fase">
-                <div class="line"></div>
-                <div class="texto-fase-de-grupos">Oitava de final</div>
-                <div class="line"></div>
-            </div>
-<!-- DERROTA - Corinthians 1x1 Rangers -->
-<div class="matches-row">
-    <div class="indicator indicator-defeat"></div>
-    <div class="row">
-        <div class="time-casa">
-            <div class="nome-do-time-casa">Corinthians</div>
-            <div class="img-wrapper"><img src="./escudos/corinthians-logo-footylogos-320.webp" alt="Corinthians"></div>
-        </div>
-
-        <div class="placar">
-            <div class="ponto-casa">1 (2)</div>
-            <div class="versus">X</div>
-            <div class="ponto-visitante">1 (3)</div>
-        </div>
-
-        <div class="time-visitante">
-            <div class="img-wrapper"><img src="./escudos/rangers-logo-footylogos.png" alt="Rangers"></div>
-            <div class="nome-do-time-fora">Rangers</div>
+            <div class="img-wrapper"><img src="./escudos/usa-national-team-logo-footylogos-320.webp" alt="Estados Unidos"></div>
+            <div class="nome-do-time-fora">Estados Unidos</div>
         </div>
     </div>
 </div>
 
-
-           
-<!-- Div finalista time campeão -->
-<div class="finalist">
-  <div class="time-campeao">
-    <div class="img-wrapper"><img src=".\escudos\chelsea-logo-footylogos-320.webp" alt="Chelsea"></div>
-    <div class="trofeu">🏆</div>
-    <div class="time-campeao-text">Chelsea</div>
-    <div class="titulo">Campeão do Mundial de Clubes FIFA</div>
-  </div>
-</div>
 
 </div>
 
