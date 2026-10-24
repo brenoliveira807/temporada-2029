@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Serie A Enilive - Temporada 2030</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body style="background: linear-gradient(180deg, #101224 47.99%, #14191d 100%);"> 
+ 
+<!-- Objeto animado no background (fixo na rolagem) -->
+<div style="
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 870px;
+    height: 870px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 870px;
+    background: rgb(35 194 212 / 37%);
+    filter: blur(250px);
+    animation: kf_120_594_scale_0 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
+"></div>
+
+<style>
+@keyframes kf_120_594_scale_0 {
+    0% { 
+        width: 870px;
+        height: 870px;
+    }  
+    100% { 
+        width: 1200px;
+        height: 1200px;
+    } 
+}
+</style>
+
+
+
+
+    <div class="container">
+        <div class="header-competicao">
+            <div class="temporada">
+                <button class="botao" onclick="window.location.href='./home.html'">
+                    <span class="botao-texto">Home</span>
+                </button>
+                <div class="line"></div>
+                <div class="texto-temporada">Temporada 2030</div>
+            </div>
+            <div class="competicao">
+                <div class="logo-competicao-brasileirao">
+                    <img src=".\escudos\serie-a-italy-logo-footylogos-320.webp" width="120px" alt="Logo">
+                </div>
+                <div class="nome-competicao">Serie A Enilive</div>
+            </div>
+
+            <div class="temporada">
+                <div class="texto-temporada">Associazione Sportiva Roma</div>
+                <div class="line"></div>
+            </div>
+        </div>
+<div class="tabela">      
+<!-- DERROTA - Roma 0x2 Como 1907 -->
+<div class="matches-row">
+    <div class="indicator indicator-defeat"></div>
+    <div class="row">
+        <div class="time-casa">
+            <div class="nome-do-time-casa">Roma</div>
+            <div class="img-wrapper"><img src="./escudos/roma-logo-footylogos-320.webp" alt="Roma"></div>
+        </div>
+
+        <div class="placar">
+            <div class="ponto-casa">0</div>
+            <div class="versus">X</div>
+            <div class="ponto-visitante">2</div>
+        </div>
+
+        <div class="time-visitante">
+            <div class="img-wrapper"><img src="./escudos/como-1907-logo-footylogos-320.webp" alt="Como 1907"></div>
+            <div class="nome-do-time-fora">Como 1907</div>
+        </div>
+    </div>
+</div>
+
+<!-- VITORIA - Carrarese 0x2 Roma -->
+<div class="matches-row">
+    <div class="indicator indicator-victory"></div>
+    <div class="row">
+        <div class="time-casa">
+            <div class="nome-do-time-casa">Carrarese</div>
+            <div class="img-wrapper"><img src="./escudos/carrarese-calcio-logo-footylogos.png" alt="Carrarese (placeholder)"></div>
+        </div>
+
+        <div class="placar">
+            <div class="ponto-casa">0</div>
+            <div class="versus">X</div>
+            <div class="ponto-visitante">2</div>
+        </div>
+
+        <div class="time-visitante">
+            <div class="img-wrapper"><img src="./escudos/roma-logo-footylogos-320.webp" alt="Roma"></div>
+            <div class="nome-do-time-fora">Roma</div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
