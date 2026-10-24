@@ -201,6 +201,14 @@ empate - Vasco 1 x 1 Corinthians - Brasileirão
 2. **Times em casa aparecem primeiro** no bloco `<time-casa>`
 3. **Logos são carregados automaticamente** da pasta `./escudos/` - não use outras pastas!
 4. **Pontos vazios para placares X-X** (empates)
+5. **Seleções Nacionais** - Quando houver jogos de seleções (Brasil, Japão, Uruguai, etc.), a busca do escudo deve usar o nome em **INGLÊS** com sufixo `-national-team` no arquivo:
+   - Brasil → `brazil-national-team-logo-footylogos_.svg` ou buscar por padrão
+   - Japão → `japan-national-team-logo-footylogos-320.webp`
+   - Uruguai → `uruguay-national-team-logo-footylogos-320.webp`
+   - Argentina → `argentina-national-team-logo-footylogos-320.webp`
+   - Itália → `italy-national-team-logo-footylogos-320.webp`
+   - Colômbia → `colombia-national-team-logo-footylogos-320.webp`
+   - França → `france-national-team-logo-footylogos-320.webp`
 
 ---
 
