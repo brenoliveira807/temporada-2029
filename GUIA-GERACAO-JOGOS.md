@@ -196,7 +196,7 @@ empate - Vasco 1 x 1 Corinthians - Brasileirão
 ---
 
 ## ⚠️ Regras Importantes
-
+REGRA DE ALTO CRITÉRIO: NUNCA FAÇA ALTERAÇÕES EM ARQUIVOS LOCAIS OU REMOTOS DO PROJETO, AO GERAR OS BLOCOS ELES PRECISAM ESTAR PRONTOS PARA SEREM COPIADOS EM INSERIDOS NOS HTMLS DE FORMA MANUAL!
 1. **O comentário sempre indica o resultado real** (ex: `<!-- DERROTA -->`) baseado na perspectiva do Corinthians
 2. **Times em casa aparecem primeiro** no bloco `<time-casa>`
 3. **Logos são carregados automaticamente** da pasta `./escudos/` - não use outras pastas!

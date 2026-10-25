@@ -301,7 +301,20 @@ animation: fadeIn 1.5s ease-out;
             border: 4px solid #1456ba;
 
         }
-                    
+        .logo-competicao-copa {
+            display: flex;
+            padding: 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100px;
+            height: 100px;
+            aspect-ratio: 1/1;
+            border-radius: 1000px;
+            background: #FFF;
+            border: 4px solid #ba1414;
+
+        }           
 
         .logo-competicao img {
             width: 100%;
