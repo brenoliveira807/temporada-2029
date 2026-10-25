@@ -244,6 +244,20 @@ animation: fadeIn 1.5s ease-out;
             background: #ffffff00;
 
         }
+        .logo-competicao-uefa {
+            display: flex;
+            padding: 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            max-width: 100px; 
+            height: auto;
+            object-fit: contain;
+            border-radius: 1000px;
+            aspect-ratio: 1/1;
+            background: #FFF;
+            border: 4px solid #0767c8;
+        }
             .logo-competicao-mundial {
             display: flex;
             padding: 42px;
